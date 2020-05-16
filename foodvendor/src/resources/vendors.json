@@ -1,0 +1,44 @@
+{
+    "shop1":{
+        "item1": {
+            "price": 10,
+            "quantity": 1
+        },
+        "item2": {
+            "price": 20,
+            "quantity": 2
+        },
+        "item3": {
+            "price": 30,
+            "quantity": 3
+        }
+    },
+    "shop2":{
+        "item3": {
+            "price": 1,
+            "quantity": 10
+        },
+        "item4": {
+            "price": 40,
+            "quantity": 4
+        },
+        "item5": {
+            "price": 50,
+            "quantity": 5
+        }
+    },
+    "shop3":{
+        "item6": {
+            "price": 60,
+            "quantity": 6
+        },
+        "item7": {
+            "price": 70,
+            "quantity": 7
+        },
+        "item8": {
+            "price": 80,
+            "quantity": 8
+        }
+    }
+}

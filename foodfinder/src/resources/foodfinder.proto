@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+import "ingredients.proto";
+
+option java_package = "javagrpc";
+
+service foodFinder{
+    rpc getIngredient(Ingredient)  returns (IngredientMap);
+}

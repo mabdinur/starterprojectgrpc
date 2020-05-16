@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option java_package = "javagrpc";
+
+service foodVendor{
+    rpc getIngredientFromVendor(VendorIngredientData)  returns (IngredientMap);
+}
+
+message VendorIngredientData{
+
+	message Vendor{
+	       string name = 1;
+	}
+	
+	message Ingredient{
+	       string name = 1;
+	}
+	
+	Vendor vendor = 1;
+	Ingredient ingredient = 2;
+}
+
+message IngredientMap
+{
+    map<string, int64> data = 1;
+}

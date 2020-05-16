@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_package = "javagrpc";
+
+service foodSupplier{
+    rpc getVendorsByIngredient(Ingredient)  returns (Vendors);
+}
+
+message Ingredient{
+       string name = 1;
+}
+
+message Vendors
+{
+	message Vendor{
+       string name = 1;
+	}
+	
+    repeated Vendor vendor = 1;
+}

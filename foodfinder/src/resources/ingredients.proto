@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option java_package = "javagrpc";
+
+message Ingredient{
+      string name = 1;
+}
+
+message IngredientMap
+{
+    map<string, int64> data = 1;
+}

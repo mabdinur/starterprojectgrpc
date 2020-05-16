@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option java_package = "javagrpc";
+
+message Vendor{
+	  string name = 1;
+}
+
+message Vendors
+{	
+    repeated Vendor vendor = 1;
+}
