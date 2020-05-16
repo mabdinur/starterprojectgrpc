@@ -28,13 +28,27 @@ public class FoodFinderService extends foodFinderImplBase
     @Override
     public void getIngredient(Ingredient ingredient, StreamObserver<IngredientMap> responseObserver)
     {
+        Vendor vendor = getFirstAvailableVendor(ingredient);
+
+        IngredientMap ingredientMap = getIngredientInfo(ingredient, vendor);
+
+        responseObserver.onNext(ingredientMap);
+        responseObserver.onCompleted();
+    }
+
+    private Vendor getFirstAvailableVendor(Ingredient ingredient)
+    {
         ManagedChannel supplierChannel =
             ManagedChannelBuilder.forAddress(ADDRESS, SUPPLIER_PORT).usePlaintext().build();
         foodSupplierBlockingStub supplierStub = foodSupplierGrpc.newBlockingStub(supplierChannel);
 
         Vendors vendors = supplierStub.getVendorsByIngredient(ingredient);
         Vendor vendor = vendors.getVendor(0);
+        return vendor;
+    }
 
+    private IngredientMap getIngredientInfo(Ingredient ingredient, Vendor vendor)
+    {
         ManagedChannel vendorChannel =
             ManagedChannelBuilder.forAddress(ADDRESS, VENDOR_PORT).usePlaintext().build();
         foodVendorBlockingStub vendorStub = foodVendorGrpc.newBlockingStub(vendorChannel);
@@ -44,8 +58,6 @@ public class FoodFinderService extends foodFinderImplBase
         vendorIngredient.setVendor(vendor);
 
         IngredientMap ingredientMap = vendorStub.getIngredientFromVendor(vendorIngredient.build());
-
-        responseObserver.onNext(ingredientMap);
-        responseObserver.onCompleted();
+        return ingredientMap;
     }
 }

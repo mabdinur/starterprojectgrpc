@@ -2,7 +2,7 @@ package tests;
 
 import org.junit.Test;
 
-public class FoodVendorImplTest
+public class FoodVendorServiceTest
 {
     private static final String VENDOR_NAME = "shop1";
     private static final String INGREDIENT_NAME = "item1";

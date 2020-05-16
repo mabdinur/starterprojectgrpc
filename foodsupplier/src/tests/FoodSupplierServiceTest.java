@@ -15,7 +15,7 @@ import javagrpc.Foodsupplier.Vendors.Builder;
 import javagrpc.Foodsupplier.Vendors.Vendor;
 import service.FoodSupplierService;;
 
-public class FoodSupplierImplTest
+public class FoodSupplierServiceTest
 {
     private FoodSupplierService foodFinderService;
 
