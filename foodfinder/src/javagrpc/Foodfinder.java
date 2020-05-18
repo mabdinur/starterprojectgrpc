@@ -23,9 +23,10 @@ public final class Foodfinder {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\020foodfinder.proto\032\021ingredients.proto2:\n" +
-      "\nfoodFinder\022,\n\rgetIngredient\022\013.Ingredien" +
-      "t\032\016.IngredientMapB\n\n\010javagrpcb\006proto3"
+      "\n\020foodfinder.proto\032\021ingredients.proto2@\n" +
+      "\nfoodFinder\0222\n\rgetIngredient\022\013.Ingredien" +
+      "t\032\024.VendorIngredientMapB\n\n\010javagrpcb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -4,8 +4,10 @@ import org.json.simple.JSONObject;
 
 import helpers.JSONReaderHelper;
 import io.grpc.stub.StreamObserver;
-import javagrpc.Foodvendor.IngredientMap;
+import javagrpc.Foodvendor.IngredientData;
 import javagrpc.Foodvendor.VendorIngredientData;
+import javagrpc.Foodvendor.VendorIngredientData.Vendor;
+import javagrpc.Foodvendor.VendorIngredientMap;
 import javagrpc.foodVendorGrpc.foodVendorImplBase;
 
 /**
@@ -25,23 +27,36 @@ public class FoodVendorService extends foodVendorImplBase
         vendorToItemsJson = JSONReaderHelper.getData(VENDOR_FILE);
     }
 
-    public void getIngredientFromVendor(VendorIngredientData vendorIngredientData,
-        StreamObserver<IngredientMap> responseObserver)
+    @Override
+    public void getIngredientFromVendors(
+        VendorIngredientData vendorIngredientData,
+        StreamObserver<VendorIngredientMap> responseObserver)
     {
-        String vendorName = vendorIngredientData.getVendor().getName();
+        VendorIngredientMap.Builder vendorIngredientMap = VendorIngredientMap.newBuilder();
         String ingredientName = vendorIngredientData.getIngredient().getName();
 
+        for (Vendor vendor : vendorIngredientData.getVendorList()) {
+            String vendorName = vendor.getName();
+            IngredientData ingredientData = getIngredientFromVendor(vendorName, ingredientName);
+            vendorIngredientMap.putVendorIngredientMap(vendorName, ingredientData);
+        }
+
+        responseObserver.onNext(vendorIngredientMap.build());
+        responseObserver.onCompleted();
+    }
+
+    private IngredientData getIngredientFromVendor(String vendorName, String ingredientName)
+    {
         JSONObject vendorItemsJson = (JSONObject) vendorToItemsJson.get(vendorName);
         JSONObject itemJson = (JSONObject) vendorItemsJson.get(ingredientName);
-        
+
         Long quantity = (Long) itemJson.get(QUANTITY);
         Long price = (Long) itemJson.get(PRICE);
 
-        IngredientMap.Builder ingredientMap = IngredientMap.newBuilder();
+        IngredientData.Builder ingredientMap = IngredientData.newBuilder();
         ingredientMap.putData(QUANTITY, quantity);
         ingredientMap.putData(PRICE, price);
 
-        responseObserver.onNext(ingredientMap.build());
-        responseObserver.onCompleted();
+        return ingredientMap.build();
     }
 }

@@ -6,7 +6,12 @@ message Ingredient{
       string name = 1;
 }
 
-message IngredientMap
+
+message IngredientData
 {
     map<string, int64> data = 1;
+}
+
+message VendorIngredientMap{
+	map <string, IngredientData> vendorIngredientMap = 1;
 }

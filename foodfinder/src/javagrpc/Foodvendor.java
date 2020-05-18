@@ -19,17 +19,28 @@ public final class Foodvendor {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.Vendor vendor = 1;</code>
+     * <code>repeated .Vendor vendor = 1;</code>
      */
-    boolean hasVendor();
+    java.util.List<javagrpc.VendorsOuterClass.Vendor> 
+        getVendorList();
     /**
-     * <code>.Vendor vendor = 1;</code>
+     * <code>repeated .Vendor vendor = 1;</code>
      */
-    javagrpc.VendorsOuterClass.Vendor getVendor();
+    javagrpc.VendorsOuterClass.Vendor getVendor(int index);
     /**
-     * <code>.Vendor vendor = 1;</code>
+     * <code>repeated .Vendor vendor = 1;</code>
      */
-    javagrpc.VendorsOuterClass.VendorOrBuilder getVendorOrBuilder();
+    int getVendorCount();
+    /**
+     * <code>repeated .Vendor vendor = 1;</code>
+     */
+    java.util.List<? extends javagrpc.VendorsOuterClass.VendorOrBuilder> 
+        getVendorOrBuilderList();
+    /**
+     * <code>repeated .Vendor vendor = 1;</code>
+     */
+    javagrpc.VendorsOuterClass.VendorOrBuilder getVendorOrBuilder(
+        int index);
 
     /**
      * <code>.Ingredient ingredient = 2;</code>
@@ -57,6 +68,7 @@ public final class Foodvendor {
       super(builder);
     }
     private VendorIngredientData() {
+      vendor_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -84,16 +96,12 @@ public final class Foodvendor {
               done = true;
               break;
             case 10: {
-              javagrpc.VendorsOuterClass.Vendor.Builder subBuilder = null;
-              if (vendor_ != null) {
-                subBuilder = vendor_.toBuilder();
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                vendor_ = new java.util.ArrayList<javagrpc.VendorsOuterClass.Vendor>();
+                mutable_bitField0_ |= 0x00000001;
               }
-              vendor_ = input.readMessage(javagrpc.VendorsOuterClass.Vendor.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(vendor_);
-                vendor_ = subBuilder.buildPartial();
-              }
-
+              vendor_.add(
+                  input.readMessage(javagrpc.VendorsOuterClass.Vendor.parser(), extensionRegistry));
               break;
             }
             case 18: {
@@ -124,6 +132,9 @@ public final class Foodvendor {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          vendor_ = java.util.Collections.unmodifiableList(vendor_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -141,25 +152,40 @@ public final class Foodvendor {
               javagrpc.Foodvendor.VendorIngredientData.class, javagrpc.Foodvendor.VendorIngredientData.Builder.class);
     }
 
+    private int bitField0_;
     public static final int VENDOR_FIELD_NUMBER = 1;
-    private javagrpc.VendorsOuterClass.Vendor vendor_;
+    private java.util.List<javagrpc.VendorsOuterClass.Vendor> vendor_;
     /**
-     * <code>.Vendor vendor = 1;</code>
+     * <code>repeated .Vendor vendor = 1;</code>
      */
-    public boolean hasVendor() {
-      return vendor_ != null;
+    public java.util.List<javagrpc.VendorsOuterClass.Vendor> getVendorList() {
+      return vendor_;
     }
     /**
-     * <code>.Vendor vendor = 1;</code>
+     * <code>repeated .Vendor vendor = 1;</code>
      */
-    public javagrpc.VendorsOuterClass.Vendor getVendor() {
-      return vendor_ == null ? javagrpc.VendorsOuterClass.Vendor.getDefaultInstance() : vendor_;
+    public java.util.List<? extends javagrpc.VendorsOuterClass.VendorOrBuilder> 
+        getVendorOrBuilderList() {
+      return vendor_;
     }
     /**
-     * <code>.Vendor vendor = 1;</code>
+     * <code>repeated .Vendor vendor = 1;</code>
      */
-    public javagrpc.VendorsOuterClass.VendorOrBuilder getVendorOrBuilder() {
-      return getVendor();
+    public int getVendorCount() {
+      return vendor_.size();
+    }
+    /**
+     * <code>repeated .Vendor vendor = 1;</code>
+     */
+    public javagrpc.VendorsOuterClass.Vendor getVendor(int index) {
+      return vendor_.get(index);
+    }
+    /**
+     * <code>repeated .Vendor vendor = 1;</code>
+     */
+    public javagrpc.VendorsOuterClass.VendorOrBuilder getVendorOrBuilder(
+        int index) {
+      return vendor_.get(index);
     }
 
     public static final int INGREDIENT_FIELD_NUMBER = 2;
@@ -197,8 +223,8 @@ public final class Foodvendor {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (vendor_ != null) {
-        output.writeMessage(1, getVendor());
+      for (int i = 0; i < vendor_.size(); i++) {
+        output.writeMessage(1, vendor_.get(i));
       }
       if (ingredient_ != null) {
         output.writeMessage(2, getIngredient());
@@ -212,9 +238,9 @@ public final class Foodvendor {
       if (size != -1) return size;
 
       size = 0;
-      if (vendor_ != null) {
+      for (int i = 0; i < vendor_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getVendor());
+          .computeMessageSize(1, vendor_.get(i));
       }
       if (ingredient_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -236,11 +262,8 @@ public final class Foodvendor {
       javagrpc.Foodvendor.VendorIngredientData other = (javagrpc.Foodvendor.VendorIngredientData) obj;
 
       boolean result = true;
-      result = result && (hasVendor() == other.hasVendor());
-      if (hasVendor()) {
-        result = result && getVendor()
-            .equals(other.getVendor());
-      }
+      result = result && getVendorList()
+          .equals(other.getVendorList());
       result = result && (hasIngredient() == other.hasIngredient());
       if (hasIngredient()) {
         result = result && getIngredient()
@@ -257,9 +280,9 @@ public final class Foodvendor {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasVendor()) {
+      if (getVendorCount() > 0) {
         hash = (37 * hash) + VENDOR_FIELD_NUMBER;
-        hash = (53 * hash) + getVendor().hashCode();
+        hash = (53 * hash) + getVendorList().hashCode();
       }
       if (hasIngredient()) {
         hash = (37 * hash) + INGREDIENT_FIELD_NUMBER;
@@ -393,16 +416,17 @@ public final class Foodvendor {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getVendorFieldBuilder();
         }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         if (vendorBuilder_ == null) {
-          vendor_ = null;
+          vendor_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          vendor_ = null;
-          vendorBuilder_ = null;
+          vendorBuilder_.clear();
         }
         if (ingredientBuilder_ == null) {
           ingredient_ = null;
@@ -436,7 +460,13 @@ public final class Foodvendor {
       @java.lang.Override
       public javagrpc.Foodvendor.VendorIngredientData buildPartial() {
         javagrpc.Foodvendor.VendorIngredientData result = new javagrpc.Foodvendor.VendorIngredientData(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (vendorBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            vendor_ = java.util.Collections.unmodifiableList(vendor_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
           result.vendor_ = vendor_;
         } else {
           result.vendor_ = vendorBuilder_.build();
@@ -446,6 +476,7 @@ public final class Foodvendor {
         } else {
           result.ingredient_ = ingredientBuilder_.build();
         }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -494,8 +525,31 @@ public final class Foodvendor {
 
       public Builder mergeFrom(javagrpc.Foodvendor.VendorIngredientData other) {
         if (other == javagrpc.Foodvendor.VendorIngredientData.getDefaultInstance()) return this;
-        if (other.hasVendor()) {
-          mergeVendor(other.getVendor());
+        if (vendorBuilder_ == null) {
+          if (!other.vendor_.isEmpty()) {
+            if (vendor_.isEmpty()) {
+              vendor_ = other.vendor_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureVendorIsMutable();
+              vendor_.addAll(other.vendor_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.vendor_.isEmpty()) {
+            if (vendorBuilder_.isEmpty()) {
+              vendorBuilder_.dispose();
+              vendorBuilder_ = null;
+              vendor_ = other.vendor_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              vendorBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getVendorFieldBuilder() : null;
+            } else {
+              vendorBuilder_.addAllMessages(other.vendor_);
+            }
+          }
         }
         if (other.hasIngredient()) {
           mergeIngredient(other.getIngredient());
@@ -528,117 +582,241 @@ public final class Foodvendor {
         }
         return this;
       }
+      private int bitField0_;
 
-      private javagrpc.VendorsOuterClass.Vendor vendor_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          javagrpc.VendorsOuterClass.Vendor, javagrpc.VendorsOuterClass.Vendor.Builder, javagrpc.VendorsOuterClass.VendorOrBuilder> vendorBuilder_;
-      /**
-       * <code>.Vendor vendor = 1;</code>
-       */
-      public boolean hasVendor() {
-        return vendorBuilder_ != null || vendor_ != null;
+      private java.util.List<javagrpc.VendorsOuterClass.Vendor> vendor_ =
+        java.util.Collections.emptyList();
+      private void ensureVendorIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          vendor_ = new java.util.ArrayList<javagrpc.VendorsOuterClass.Vendor>(vendor_);
+          bitField0_ |= 0x00000001;
+         }
       }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          javagrpc.VendorsOuterClass.Vendor, javagrpc.VendorsOuterClass.Vendor.Builder, javagrpc.VendorsOuterClass.VendorOrBuilder> vendorBuilder_;
+
       /**
-       * <code>.Vendor vendor = 1;</code>
+       * <code>repeated .Vendor vendor = 1;</code>
        */
-      public javagrpc.VendorsOuterClass.Vendor getVendor() {
+      public java.util.List<javagrpc.VendorsOuterClass.Vendor> getVendorList() {
         if (vendorBuilder_ == null) {
-          return vendor_ == null ? javagrpc.VendorsOuterClass.Vendor.getDefaultInstance() : vendor_;
+          return java.util.Collections.unmodifiableList(vendor_);
         } else {
-          return vendorBuilder_.getMessage();
+          return vendorBuilder_.getMessageList();
         }
       }
       /**
-       * <code>.Vendor vendor = 1;</code>
+       * <code>repeated .Vendor vendor = 1;</code>
        */
-      public Builder setVendor(javagrpc.VendorsOuterClass.Vendor value) {
+      public int getVendorCount() {
+        if (vendorBuilder_ == null) {
+          return vendor_.size();
+        } else {
+          return vendorBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .Vendor vendor = 1;</code>
+       */
+      public javagrpc.VendorsOuterClass.Vendor getVendor(int index) {
+        if (vendorBuilder_ == null) {
+          return vendor_.get(index);
+        } else {
+          return vendorBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .Vendor vendor = 1;</code>
+       */
+      public Builder setVendor(
+          int index, javagrpc.VendorsOuterClass.Vendor value) {
         if (vendorBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          vendor_ = value;
+          ensureVendorIsMutable();
+          vendor_.set(index, value);
           onChanged();
         } else {
-          vendorBuilder_.setMessage(value);
+          vendorBuilder_.setMessage(index, value);
         }
-
         return this;
       }
       /**
-       * <code>.Vendor vendor = 1;</code>
+       * <code>repeated .Vendor vendor = 1;</code>
        */
       public Builder setVendor(
+          int index, javagrpc.VendorsOuterClass.Vendor.Builder builderForValue) {
+        if (vendorBuilder_ == null) {
+          ensureVendorIsMutable();
+          vendor_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          vendorBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Vendor vendor = 1;</code>
+       */
+      public Builder addVendor(javagrpc.VendorsOuterClass.Vendor value) {
+        if (vendorBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVendorIsMutable();
+          vendor_.add(value);
+          onChanged();
+        } else {
+          vendorBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Vendor vendor = 1;</code>
+       */
+      public Builder addVendor(
+          int index, javagrpc.VendorsOuterClass.Vendor value) {
+        if (vendorBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVendorIsMutable();
+          vendor_.add(index, value);
+          onChanged();
+        } else {
+          vendorBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Vendor vendor = 1;</code>
+       */
+      public Builder addVendor(
           javagrpc.VendorsOuterClass.Vendor.Builder builderForValue) {
         if (vendorBuilder_ == null) {
-          vendor_ = builderForValue.build();
+          ensureVendorIsMutable();
+          vendor_.add(builderForValue.build());
           onChanged();
         } else {
-          vendorBuilder_.setMessage(builderForValue.build());
+          vendorBuilder_.addMessage(builderForValue.build());
         }
-
         return this;
       }
       /**
-       * <code>.Vendor vendor = 1;</code>
+       * <code>repeated .Vendor vendor = 1;</code>
        */
-      public Builder mergeVendor(javagrpc.VendorsOuterClass.Vendor value) {
+      public Builder addVendor(
+          int index, javagrpc.VendorsOuterClass.Vendor.Builder builderForValue) {
         if (vendorBuilder_ == null) {
-          if (vendor_ != null) {
-            vendor_ =
-              javagrpc.VendorsOuterClass.Vendor.newBuilder(vendor_).mergeFrom(value).buildPartial();
-          } else {
-            vendor_ = value;
-          }
+          ensureVendorIsMutable();
+          vendor_.add(index, builderForValue.build());
           onChanged();
         } else {
-          vendorBuilder_.mergeFrom(value);
+          vendorBuilder_.addMessage(index, builderForValue.build());
         }
-
         return this;
       }
       /**
-       * <code>.Vendor vendor = 1;</code>
+       * <code>repeated .Vendor vendor = 1;</code>
+       */
+      public Builder addAllVendor(
+          java.lang.Iterable<? extends javagrpc.VendorsOuterClass.Vendor> values) {
+        if (vendorBuilder_ == null) {
+          ensureVendorIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, vendor_);
+          onChanged();
+        } else {
+          vendorBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Vendor vendor = 1;</code>
        */
       public Builder clearVendor() {
         if (vendorBuilder_ == null) {
-          vendor_ = null;
+          vendor_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
-          vendor_ = null;
-          vendorBuilder_ = null;
+          vendorBuilder_.clear();
         }
-
         return this;
       }
       /**
-       * <code>.Vendor vendor = 1;</code>
+       * <code>repeated .Vendor vendor = 1;</code>
        */
-      public javagrpc.VendorsOuterClass.Vendor.Builder getVendorBuilder() {
-        
-        onChanged();
-        return getVendorFieldBuilder().getBuilder();
+      public Builder removeVendor(int index) {
+        if (vendorBuilder_ == null) {
+          ensureVendorIsMutable();
+          vendor_.remove(index);
+          onChanged();
+        } else {
+          vendorBuilder_.remove(index);
+        }
+        return this;
       }
       /**
-       * <code>.Vendor vendor = 1;</code>
+       * <code>repeated .Vendor vendor = 1;</code>
        */
-      public javagrpc.VendorsOuterClass.VendorOrBuilder getVendorOrBuilder() {
-        if (vendorBuilder_ != null) {
-          return vendorBuilder_.getMessageOrBuilder();
-        } else {
-          return vendor_ == null ?
-              javagrpc.VendorsOuterClass.Vendor.getDefaultInstance() : vendor_;
+      public javagrpc.VendorsOuterClass.Vendor.Builder getVendorBuilder(
+          int index) {
+        return getVendorFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .Vendor vendor = 1;</code>
+       */
+      public javagrpc.VendorsOuterClass.VendorOrBuilder getVendorOrBuilder(
+          int index) {
+        if (vendorBuilder_ == null) {
+          return vendor_.get(index);  } else {
+          return vendorBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>.Vendor vendor = 1;</code>
+       * <code>repeated .Vendor vendor = 1;</code>
        */
-      private com.google.protobuf.SingleFieldBuilderV3<
+      public java.util.List<? extends javagrpc.VendorsOuterClass.VendorOrBuilder> 
+           getVendorOrBuilderList() {
+        if (vendorBuilder_ != null) {
+          return vendorBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(vendor_);
+        }
+      }
+      /**
+       * <code>repeated .Vendor vendor = 1;</code>
+       */
+      public javagrpc.VendorsOuterClass.Vendor.Builder addVendorBuilder() {
+        return getVendorFieldBuilder().addBuilder(
+            javagrpc.VendorsOuterClass.Vendor.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Vendor vendor = 1;</code>
+       */
+      public javagrpc.VendorsOuterClass.Vendor.Builder addVendorBuilder(
+          int index) {
+        return getVendorFieldBuilder().addBuilder(
+            index, javagrpc.VendorsOuterClass.Vendor.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Vendor vendor = 1;</code>
+       */
+      public java.util.List<javagrpc.VendorsOuterClass.Vendor.Builder> 
+           getVendorBuilderList() {
+        return getVendorFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
           javagrpc.VendorsOuterClass.Vendor, javagrpc.VendorsOuterClass.Vendor.Builder, javagrpc.VendorsOuterClass.VendorOrBuilder> 
           getVendorFieldBuilder() {
         if (vendorBuilder_ == null) {
-          vendorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          vendorBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               javagrpc.VendorsOuterClass.Vendor, javagrpc.VendorsOuterClass.Vendor.Builder, javagrpc.VendorsOuterClass.VendorOrBuilder>(
-                  getVendor(),
+                  vendor_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
                   getParentForChildren(),
                   isClean());
           vendor_ = null;
@@ -831,10 +1009,11 @@ public final class Foodvendor {
     java.lang.String[] descriptorData = {
       "\n\020foodvendor.proto\032\021ingredients.proto\032\rv" +
       "endors.proto\"P\n\024VendorIngredientData\022\027\n\006" +
-      "vendor\030\001 \001(\0132\007.Vendor\022\037\n\ningredient\030\002 \001(" +
-      "\0132\013.Ingredient2N\n\nfoodVendor\022@\n\027getIngre" +
-      "dientFromVendor\022\025.VendorIngredientData\032\016" +
-      ".IngredientMapB\n\n\010javagrpcb\006proto3"
+      "vendor\030\001 \003(\0132\007.Vendor\022\037\n\ningredient\030\002 \001(" +
+      "\0132\013.Ingredient2U\n\nfoodVendor\022G\n\030getIngre" +
+      "dientFromVendors\022\025.VendorIngredientData\032" +
+      "\024.VendorIngredientMapB\n\n\010javagrpcb\006proto" +
+      "3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

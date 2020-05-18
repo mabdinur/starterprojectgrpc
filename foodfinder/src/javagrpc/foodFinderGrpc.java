@@ -28,21 +28,21 @@ public final class foodFinderGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<javagrpc.Ingredients.Ingredient,
-      javagrpc.Ingredients.IngredientMap> getGetIngredientMethod;
+      javagrpc.Ingredients.VendorIngredientMap> getGetIngredientMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "getIngredient",
       requestType = javagrpc.Ingredients.Ingredient.class,
-      responseType = javagrpc.Ingredients.IngredientMap.class,
+      responseType = javagrpc.Ingredients.VendorIngredientMap.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<javagrpc.Ingredients.Ingredient,
-      javagrpc.Ingredients.IngredientMap> getGetIngredientMethod() {
-    io.grpc.MethodDescriptor<javagrpc.Ingredients.Ingredient, javagrpc.Ingredients.IngredientMap> getGetIngredientMethod;
+      javagrpc.Ingredients.VendorIngredientMap> getGetIngredientMethod() {
+    io.grpc.MethodDescriptor<javagrpc.Ingredients.Ingredient, javagrpc.Ingredients.VendorIngredientMap> getGetIngredientMethod;
     if ((getGetIngredientMethod = foodFinderGrpc.getGetIngredientMethod) == null) {
       synchronized (foodFinderGrpc.class) {
         if ((getGetIngredientMethod = foodFinderGrpc.getGetIngredientMethod) == null) {
           foodFinderGrpc.getGetIngredientMethod = getGetIngredientMethod = 
-              io.grpc.MethodDescriptor.<javagrpc.Ingredients.Ingredient, javagrpc.Ingredients.IngredientMap>newBuilder()
+              io.grpc.MethodDescriptor.<javagrpc.Ingredients.Ingredient, javagrpc.Ingredients.VendorIngredientMap>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "foodFinder", "getIngredient"))
@@ -50,7 +50,7 @@ public final class foodFinderGrpc {
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   javagrpc.Ingredients.Ingredient.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  javagrpc.Ingredients.IngredientMap.getDefaultInstance()))
+                  javagrpc.Ingredients.VendorIngredientMap.getDefaultInstance()))
                   .setSchemaDescriptor(new foodFinderMethodDescriptorSupplier("getIngredient"))
                   .build();
           }
@@ -89,7 +89,7 @@ public final class foodFinderGrpc {
     /**
      */
     public void getIngredient(javagrpc.Ingredients.Ingredient request,
-        io.grpc.stub.StreamObserver<javagrpc.Ingredients.IngredientMap> responseObserver) {
+        io.grpc.stub.StreamObserver<javagrpc.Ingredients.VendorIngredientMap> responseObserver) {
       asyncUnimplementedUnaryCall(getGetIngredientMethod(), responseObserver);
     }
 
@@ -100,7 +100,7 @@ public final class foodFinderGrpc {
             asyncUnaryCall(
               new MethodHandlers<
                 javagrpc.Ingredients.Ingredient,
-                javagrpc.Ingredients.IngredientMap>(
+                javagrpc.Ingredients.VendorIngredientMap>(
                   this, METHODID_GET_INGREDIENT)))
           .build();
     }
@@ -127,7 +127,7 @@ public final class foodFinderGrpc {
     /**
      */
     public void getIngredient(javagrpc.Ingredients.Ingredient request,
-        io.grpc.stub.StreamObserver<javagrpc.Ingredients.IngredientMap> responseObserver) {
+        io.grpc.stub.StreamObserver<javagrpc.Ingredients.VendorIngredientMap> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGetIngredientMethod(), getCallOptions()), request, responseObserver);
     }
@@ -153,7 +153,7 @@ public final class foodFinderGrpc {
 
     /**
      */
-    public javagrpc.Ingredients.IngredientMap getIngredient(javagrpc.Ingredients.Ingredient request) {
+    public javagrpc.Ingredients.VendorIngredientMap getIngredient(javagrpc.Ingredients.Ingredient request) {
       return blockingUnaryCall(
           getChannel(), getGetIngredientMethod(), getCallOptions(), request);
     }
@@ -179,7 +179,7 @@ public final class foodFinderGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<javagrpc.Ingredients.IngredientMap> getIngredient(
+    public com.google.common.util.concurrent.ListenableFuture<javagrpc.Ingredients.VendorIngredientMap> getIngredient(
         javagrpc.Ingredients.Ingredient request) {
       return futureUnaryCall(
           getChannel().newCall(getGetIngredientMethod(), getCallOptions()), request);
@@ -207,7 +207,7 @@ public final class foodFinderGrpc {
       switch (methodId) {
         case METHODID_GET_INGREDIENT:
           serviceImpl.getIngredient((javagrpc.Ingredients.Ingredient) request,
-              (io.grpc.stub.StreamObserver<javagrpc.Ingredients.IngredientMap>) responseObserver);
+              (io.grpc.stub.StreamObserver<javagrpc.Ingredients.VendorIngredientMap>) responseObserver);
           break;
         default:
           throw new AssertionError();

@@ -564,8 +564,8 @@ public final class Ingredients {
 
   }
 
-  public interface IngredientMapOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:IngredientMap)
+  public interface IngredientDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:IngredientData)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -603,18 +603,18 @@ public final class Ingredients {
         java.lang.String key);
   }
   /**
-   * Protobuf type {@code IngredientMap}
+   * Protobuf type {@code IngredientData}
    */
-  public  static final class IngredientMap extends
+  public  static final class IngredientData extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:IngredientMap)
-      IngredientMapOrBuilder {
+      // @@protoc_insertion_point(message_implements:IngredientData)
+      IngredientDataOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use IngredientMap.newBuilder() to construct.
-    private IngredientMap(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use IngredientData.newBuilder() to construct.
+    private IngredientData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private IngredientMap() {
+    private IngredientData() {
     }
 
     @java.lang.Override
@@ -622,7 +622,7 @@ public final class Ingredients {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private IngredientMap(
+    private IngredientData(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -675,7 +675,7 @@ public final class Ingredients {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return javagrpc.Ingredients.internal_static_IngredientMap_descriptor;
+      return javagrpc.Ingredients.internal_static_IngredientData_descriptor;
     }
 
     @SuppressWarnings({"rawtypes"})
@@ -693,9 +693,9 @@ public final class Ingredients {
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return javagrpc.Ingredients.internal_static_IngredientMap_fieldAccessorTable
+      return javagrpc.Ingredients.internal_static_IngredientData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              javagrpc.Ingredients.IngredientMap.class, javagrpc.Ingredients.IngredientMap.Builder.class);
+              javagrpc.Ingredients.IngredientData.class, javagrpc.Ingredients.IngredientData.Builder.class);
     }
 
     public static final int DATA_FIELD_NUMBER = 1;
@@ -704,7 +704,7 @@ public final class Ingredients {
           java.lang.String, java.lang.Long> defaultEntry =
               com.google.protobuf.MapEntry
               .<java.lang.String, java.lang.Long>newDefaultInstance(
-                  javagrpc.Ingredients.internal_static_IngredientMap_DataEntry_descriptor, 
+                  javagrpc.Ingredients.internal_static_IngredientData_DataEntry_descriptor, 
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "",
                   com.google.protobuf.WireFormat.FieldType.INT64,
@@ -823,10 +823,10 @@ public final class Ingredients {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof javagrpc.Ingredients.IngredientMap)) {
+      if (!(obj instanceof javagrpc.Ingredients.IngredientData)) {
         return super.equals(obj);
       }
-      javagrpc.Ingredients.IngredientMap other = (javagrpc.Ingredients.IngredientMap) obj;
+      javagrpc.Ingredients.IngredientData other = (javagrpc.Ingredients.IngredientData) obj;
 
       boolean result = true;
       result = result && internalGetData().equals(
@@ -851,69 +851,69 @@ public final class Ingredients {
       return hash;
     }
 
-    public static javagrpc.Ingredients.IngredientMap parseFrom(
+    public static javagrpc.Ingredients.IngredientData parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static javagrpc.Ingredients.IngredientMap parseFrom(
+    public static javagrpc.Ingredients.IngredientData parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static javagrpc.Ingredients.IngredientMap parseFrom(
+    public static javagrpc.Ingredients.IngredientData parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static javagrpc.Ingredients.IngredientMap parseFrom(
+    public static javagrpc.Ingredients.IngredientData parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static javagrpc.Ingredients.IngredientMap parseFrom(byte[] data)
+    public static javagrpc.Ingredients.IngredientData parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static javagrpc.Ingredients.IngredientMap parseFrom(
+    public static javagrpc.Ingredients.IngredientData parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static javagrpc.Ingredients.IngredientMap parseFrom(java.io.InputStream input)
+    public static javagrpc.Ingredients.IngredientData parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static javagrpc.Ingredients.IngredientMap parseFrom(
+    public static javagrpc.Ingredients.IngredientData parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static javagrpc.Ingredients.IngredientMap parseDelimitedFrom(java.io.InputStream input)
+    public static javagrpc.Ingredients.IngredientData parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static javagrpc.Ingredients.IngredientMap parseDelimitedFrom(
+    public static javagrpc.Ingredients.IngredientData parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static javagrpc.Ingredients.IngredientMap parseFrom(
+    public static javagrpc.Ingredients.IngredientData parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static javagrpc.Ingredients.IngredientMap parseFrom(
+    public static javagrpc.Ingredients.IngredientData parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -926,7 +926,7 @@ public final class Ingredients {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(javagrpc.Ingredients.IngredientMap prototype) {
+    public static Builder newBuilder(javagrpc.Ingredients.IngredientData prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -942,15 +942,15 @@ public final class Ingredients {
       return builder;
     }
     /**
-     * Protobuf type {@code IngredientMap}
+     * Protobuf type {@code IngredientData}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:IngredientMap)
-        javagrpc.Ingredients.IngredientMapOrBuilder {
+        // @@protoc_insertion_point(builder_implements:IngredientData)
+        javagrpc.Ingredients.IngredientDataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return javagrpc.Ingredients.internal_static_IngredientMap_descriptor;
+        return javagrpc.Ingredients.internal_static_IngredientData_descriptor;
       }
 
       @SuppressWarnings({"rawtypes"})
@@ -978,12 +978,12 @@ public final class Ingredients {
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return javagrpc.Ingredients.internal_static_IngredientMap_fieldAccessorTable
+        return javagrpc.Ingredients.internal_static_IngredientData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                javagrpc.Ingredients.IngredientMap.class, javagrpc.Ingredients.IngredientMap.Builder.class);
+                javagrpc.Ingredients.IngredientData.class, javagrpc.Ingredients.IngredientData.Builder.class);
       }
 
-      // Construct using javagrpc.Ingredients.IngredientMap.newBuilder()
+      // Construct using javagrpc.Ingredients.IngredientData.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1008,17 +1008,17 @@ public final class Ingredients {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return javagrpc.Ingredients.internal_static_IngredientMap_descriptor;
+        return javagrpc.Ingredients.internal_static_IngredientData_descriptor;
       }
 
       @java.lang.Override
-      public javagrpc.Ingredients.IngredientMap getDefaultInstanceForType() {
-        return javagrpc.Ingredients.IngredientMap.getDefaultInstance();
+      public javagrpc.Ingredients.IngredientData getDefaultInstanceForType() {
+        return javagrpc.Ingredients.IngredientData.getDefaultInstance();
       }
 
       @java.lang.Override
-      public javagrpc.Ingredients.IngredientMap build() {
-        javagrpc.Ingredients.IngredientMap result = buildPartial();
+      public javagrpc.Ingredients.IngredientData build() {
+        javagrpc.Ingredients.IngredientData result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1026,8 +1026,8 @@ public final class Ingredients {
       }
 
       @java.lang.Override
-      public javagrpc.Ingredients.IngredientMap buildPartial() {
-        javagrpc.Ingredients.IngredientMap result = new javagrpc.Ingredients.IngredientMap(this);
+      public javagrpc.Ingredients.IngredientData buildPartial() {
+        javagrpc.Ingredients.IngredientData result = new javagrpc.Ingredients.IngredientData(this);
         int from_bitField0_ = bitField0_;
         result.data_ = internalGetData();
         result.data_.makeImmutable();
@@ -1069,16 +1069,16 @@ public final class Ingredients {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof javagrpc.Ingredients.IngredientMap) {
-          return mergeFrom((javagrpc.Ingredients.IngredientMap)other);
+        if (other instanceof javagrpc.Ingredients.IngredientData) {
+          return mergeFrom((javagrpc.Ingredients.IngredientData)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(javagrpc.Ingredients.IngredientMap other) {
-        if (other == javagrpc.Ingredients.IngredientMap.getDefaultInstance()) return this;
+      public Builder mergeFrom(javagrpc.Ingredients.IngredientData other) {
+        if (other == javagrpc.Ingredients.IngredientData.getDefaultInstance()) return this;
         internalGetMutableData().mergeFrom(
             other.internalGetData());
         this.mergeUnknownFields(other.unknownFields);
@@ -1096,11 +1096,11 @@ public final class Ingredients {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        javagrpc.Ingredients.IngredientMap parsedMessage = null;
+        javagrpc.Ingredients.IngredientData parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (javagrpc.Ingredients.IngredientMap) e.getUnfinishedMessage();
+          parsedMessage = (javagrpc.Ingredients.IngredientData) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1246,41 +1246,763 @@ public final class Ingredients {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:IngredientMap)
+      // @@protoc_insertion_point(builder_scope:IngredientData)
     }
 
-    // @@protoc_insertion_point(class_scope:IngredientMap)
-    private static final javagrpc.Ingredients.IngredientMap DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:IngredientData)
+    private static final javagrpc.Ingredients.IngredientData DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new javagrpc.Ingredients.IngredientMap();
+      DEFAULT_INSTANCE = new javagrpc.Ingredients.IngredientData();
     }
 
-    public static javagrpc.Ingredients.IngredientMap getDefaultInstance() {
+    public static javagrpc.Ingredients.IngredientData getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<IngredientMap>
-        PARSER = new com.google.protobuf.AbstractParser<IngredientMap>() {
+    private static final com.google.protobuf.Parser<IngredientData>
+        PARSER = new com.google.protobuf.AbstractParser<IngredientData>() {
       @java.lang.Override
-      public IngredientMap parsePartialFrom(
+      public IngredientData parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new IngredientMap(input, extensionRegistry);
+        return new IngredientData(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<IngredientMap> parser() {
+    public static com.google.protobuf.Parser<IngredientData> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<IngredientMap> getParserForType() {
+    public com.google.protobuf.Parser<IngredientData> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public javagrpc.Ingredients.IngredientMap getDefaultInstanceForType() {
+    public javagrpc.Ingredients.IngredientData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface VendorIngredientMapOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:VendorIngredientMap)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>map&lt;string, .IngredientData&gt; vendorIngredientMap = 1;</code>
+     */
+    int getVendorIngredientMapCount();
+    /**
+     * <code>map&lt;string, .IngredientData&gt; vendorIngredientMap = 1;</code>
+     */
+    boolean containsVendorIngredientMap(
+        java.lang.String key);
+    /**
+     * Use {@link #getVendorIngredientMapMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, javagrpc.Ingredients.IngredientData>
+    getVendorIngredientMap();
+    /**
+     * <code>map&lt;string, .IngredientData&gt; vendorIngredientMap = 1;</code>
+     */
+    java.util.Map<java.lang.String, javagrpc.Ingredients.IngredientData>
+    getVendorIngredientMapMap();
+    /**
+     * <code>map&lt;string, .IngredientData&gt; vendorIngredientMap = 1;</code>
+     */
+
+    javagrpc.Ingredients.IngredientData getVendorIngredientMapOrDefault(
+        java.lang.String key,
+        javagrpc.Ingredients.IngredientData defaultValue);
+    /**
+     * <code>map&lt;string, .IngredientData&gt; vendorIngredientMap = 1;</code>
+     */
+
+    javagrpc.Ingredients.IngredientData getVendorIngredientMapOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * Protobuf type {@code VendorIngredientMap}
+   */
+  public  static final class VendorIngredientMap extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:VendorIngredientMap)
+      VendorIngredientMapOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use VendorIngredientMap.newBuilder() to construct.
+    private VendorIngredientMap(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private VendorIngredientMap() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private VendorIngredientMap(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                vendorIngredientMap_ = com.google.protobuf.MapField.newMapField(
+                    VendorIngredientMapDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, javagrpc.Ingredients.IngredientData>
+              vendorIngredientMap__ = input.readMessage(
+                  VendorIngredientMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              vendorIngredientMap_.getMutableMap().put(
+                  vendorIngredientMap__.getKey(), vendorIngredientMap__.getValue());
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return javagrpc.Ingredients.internal_static_VendorIngredientMap_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 1:
+          return internalGetVendorIngredientMap();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return javagrpc.Ingredients.internal_static_VendorIngredientMap_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              javagrpc.Ingredients.VendorIngredientMap.class, javagrpc.Ingredients.VendorIngredientMap.Builder.class);
+    }
+
+    public static final int VENDORINGREDIENTMAP_FIELD_NUMBER = 1;
+    private static final class VendorIngredientMapDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, javagrpc.Ingredients.IngredientData> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, javagrpc.Ingredients.IngredientData>newDefaultInstance(
+                  javagrpc.Ingredients.internal_static_VendorIngredientMap_VendorIngredientMapEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  javagrpc.Ingredients.IngredientData.getDefaultInstance());
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, javagrpc.Ingredients.IngredientData> vendorIngredientMap_;
+    private com.google.protobuf.MapField<java.lang.String, javagrpc.Ingredients.IngredientData>
+    internalGetVendorIngredientMap() {
+      if (vendorIngredientMap_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            VendorIngredientMapDefaultEntryHolder.defaultEntry);
+      }
+      return vendorIngredientMap_;
+    }
+
+    public int getVendorIngredientMapCount() {
+      return internalGetVendorIngredientMap().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, .IngredientData&gt; vendorIngredientMap = 1;</code>
+     */
+
+    public boolean containsVendorIngredientMap(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetVendorIngredientMap().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getVendorIngredientMapMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, javagrpc.Ingredients.IngredientData> getVendorIngredientMap() {
+      return getVendorIngredientMapMap();
+    }
+    /**
+     * <code>map&lt;string, .IngredientData&gt; vendorIngredientMap = 1;</code>
+     */
+
+    public java.util.Map<java.lang.String, javagrpc.Ingredients.IngredientData> getVendorIngredientMapMap() {
+      return internalGetVendorIngredientMap().getMap();
+    }
+    /**
+     * <code>map&lt;string, .IngredientData&gt; vendorIngredientMap = 1;</code>
+     */
+
+    public javagrpc.Ingredients.IngredientData getVendorIngredientMapOrDefault(
+        java.lang.String key,
+        javagrpc.Ingredients.IngredientData defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, javagrpc.Ingredients.IngredientData> map =
+          internalGetVendorIngredientMap().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, .IngredientData&gt; vendorIngredientMap = 1;</code>
+     */
+
+    public javagrpc.Ingredients.IngredientData getVendorIngredientMapOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, javagrpc.Ingredients.IngredientData> map =
+          internalGetVendorIngredientMap().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetVendorIngredientMap(),
+          VendorIngredientMapDefaultEntryHolder.defaultEntry,
+          1);
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (java.util.Map.Entry<java.lang.String, javagrpc.Ingredients.IngredientData> entry
+           : internalGetVendorIngredientMap().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, javagrpc.Ingredients.IngredientData>
+        vendorIngredientMap__ = VendorIngredientMapDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, vendorIngredientMap__);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof javagrpc.Ingredients.VendorIngredientMap)) {
+        return super.equals(obj);
+      }
+      javagrpc.Ingredients.VendorIngredientMap other = (javagrpc.Ingredients.VendorIngredientMap) obj;
+
+      boolean result = true;
+      result = result && internalGetVendorIngredientMap().equals(
+          other.internalGetVendorIngredientMap());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (!internalGetVendorIngredientMap().getMap().isEmpty()) {
+        hash = (37 * hash) + VENDORINGREDIENTMAP_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetVendorIngredientMap().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static javagrpc.Ingredients.VendorIngredientMap parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static javagrpc.Ingredients.VendorIngredientMap parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static javagrpc.Ingredients.VendorIngredientMap parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static javagrpc.Ingredients.VendorIngredientMap parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static javagrpc.Ingredients.VendorIngredientMap parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static javagrpc.Ingredients.VendorIngredientMap parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static javagrpc.Ingredients.VendorIngredientMap parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static javagrpc.Ingredients.VendorIngredientMap parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static javagrpc.Ingredients.VendorIngredientMap parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static javagrpc.Ingredients.VendorIngredientMap parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static javagrpc.Ingredients.VendorIngredientMap parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static javagrpc.Ingredients.VendorIngredientMap parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(javagrpc.Ingredients.VendorIngredientMap prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code VendorIngredientMap}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:VendorIngredientMap)
+        javagrpc.Ingredients.VendorIngredientMapOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return javagrpc.Ingredients.internal_static_VendorIngredientMap_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 1:
+            return internalGetVendorIngredientMap();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 1:
+            return internalGetMutableVendorIngredientMap();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return javagrpc.Ingredients.internal_static_VendorIngredientMap_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                javagrpc.Ingredients.VendorIngredientMap.class, javagrpc.Ingredients.VendorIngredientMap.Builder.class);
+      }
+
+      // Construct using javagrpc.Ingredients.VendorIngredientMap.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        internalGetMutableVendorIngredientMap().clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return javagrpc.Ingredients.internal_static_VendorIngredientMap_descriptor;
+      }
+
+      @java.lang.Override
+      public javagrpc.Ingredients.VendorIngredientMap getDefaultInstanceForType() {
+        return javagrpc.Ingredients.VendorIngredientMap.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public javagrpc.Ingredients.VendorIngredientMap build() {
+        javagrpc.Ingredients.VendorIngredientMap result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public javagrpc.Ingredients.VendorIngredientMap buildPartial() {
+        javagrpc.Ingredients.VendorIngredientMap result = new javagrpc.Ingredients.VendorIngredientMap(this);
+        int from_bitField0_ = bitField0_;
+        result.vendorIngredientMap_ = internalGetVendorIngredientMap();
+        result.vendorIngredientMap_.makeImmutable();
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof javagrpc.Ingredients.VendorIngredientMap) {
+          return mergeFrom((javagrpc.Ingredients.VendorIngredientMap)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(javagrpc.Ingredients.VendorIngredientMap other) {
+        if (other == javagrpc.Ingredients.VendorIngredientMap.getDefaultInstance()) return this;
+        internalGetMutableVendorIngredientMap().mergeFrom(
+            other.internalGetVendorIngredientMap());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        javagrpc.Ingredients.VendorIngredientMap parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (javagrpc.Ingredients.VendorIngredientMap) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.MapField<
+          java.lang.String, javagrpc.Ingredients.IngredientData> vendorIngredientMap_;
+      private com.google.protobuf.MapField<java.lang.String, javagrpc.Ingredients.IngredientData>
+      internalGetVendorIngredientMap() {
+        if (vendorIngredientMap_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              VendorIngredientMapDefaultEntryHolder.defaultEntry);
+        }
+        return vendorIngredientMap_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, javagrpc.Ingredients.IngredientData>
+      internalGetMutableVendorIngredientMap() {
+        onChanged();;
+        if (vendorIngredientMap_ == null) {
+          vendorIngredientMap_ = com.google.protobuf.MapField.newMapField(
+              VendorIngredientMapDefaultEntryHolder.defaultEntry);
+        }
+        if (!vendorIngredientMap_.isMutable()) {
+          vendorIngredientMap_ = vendorIngredientMap_.copy();
+        }
+        return vendorIngredientMap_;
+      }
+
+      public int getVendorIngredientMapCount() {
+        return internalGetVendorIngredientMap().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, .IngredientData&gt; vendorIngredientMap = 1;</code>
+       */
+
+      public boolean containsVendorIngredientMap(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetVendorIngredientMap().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getVendorIngredientMapMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, javagrpc.Ingredients.IngredientData> getVendorIngredientMap() {
+        return getVendorIngredientMapMap();
+      }
+      /**
+       * <code>map&lt;string, .IngredientData&gt; vendorIngredientMap = 1;</code>
+       */
+
+      public java.util.Map<java.lang.String, javagrpc.Ingredients.IngredientData> getVendorIngredientMapMap() {
+        return internalGetVendorIngredientMap().getMap();
+      }
+      /**
+       * <code>map&lt;string, .IngredientData&gt; vendorIngredientMap = 1;</code>
+       */
+
+      public javagrpc.Ingredients.IngredientData getVendorIngredientMapOrDefault(
+          java.lang.String key,
+          javagrpc.Ingredients.IngredientData defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, javagrpc.Ingredients.IngredientData> map =
+            internalGetVendorIngredientMap().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, .IngredientData&gt; vendorIngredientMap = 1;</code>
+       */
+
+      public javagrpc.Ingredients.IngredientData getVendorIngredientMapOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, javagrpc.Ingredients.IngredientData> map =
+            internalGetVendorIngredientMap().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearVendorIngredientMap() {
+        internalGetMutableVendorIngredientMap().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .IngredientData&gt; vendorIngredientMap = 1;</code>
+       */
+
+      public Builder removeVendorIngredientMap(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableVendorIngredientMap().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, javagrpc.Ingredients.IngredientData>
+      getMutableVendorIngredientMap() {
+        return internalGetMutableVendorIngredientMap().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, .IngredientData&gt; vendorIngredientMap = 1;</code>
+       */
+      public Builder putVendorIngredientMap(
+          java.lang.String key,
+          javagrpc.Ingredients.IngredientData value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableVendorIngredientMap().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .IngredientData&gt; vendorIngredientMap = 1;</code>
+       */
+
+      public Builder putAllVendorIngredientMap(
+          java.util.Map<java.lang.String, javagrpc.Ingredients.IngredientData> values) {
+        internalGetMutableVendorIngredientMap().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:VendorIngredientMap)
+    }
+
+    // @@protoc_insertion_point(class_scope:VendorIngredientMap)
+    private static final javagrpc.Ingredients.VendorIngredientMap DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new javagrpc.Ingredients.VendorIngredientMap();
+    }
+
+    public static javagrpc.Ingredients.VendorIngredientMap getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<VendorIngredientMap>
+        PARSER = new com.google.protobuf.AbstractParser<VendorIngredientMap>() {
+      @java.lang.Override
+      public VendorIngredientMap parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new VendorIngredientMap(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<VendorIngredientMap> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<VendorIngredientMap> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public javagrpc.Ingredients.VendorIngredientMap getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1292,15 +2014,25 @@ public final class Ingredients {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_Ingredient_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_IngredientMap_descriptor;
+    internal_static_IngredientData_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_IngredientMap_fieldAccessorTable;
+      internal_static_IngredientData_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_IngredientMap_DataEntry_descriptor;
+    internal_static_IngredientData_DataEntry_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_IngredientMap_DataEntry_fieldAccessorTable;
+      internal_static_IngredientData_DataEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_VendorIngredientMap_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_VendorIngredientMap_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_VendorIngredientMap_VendorIngredientMapEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_VendorIngredientMap_VendorIngredientMapEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1311,10 +2043,14 @@ public final class Ingredients {
   static {
     java.lang.String[] descriptorData = {
       "\n\021ingredients.proto\"\032\n\nIngredient\022\014\n\004nam" +
-      "e\030\001 \001(\t\"d\n\rIngredientMap\022&\n\004data\030\001 \003(\0132\030" +
-      ".IngredientMap.DataEntry\032+\n\tDataEntry\022\013\n" +
-      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\003:\0028\001B\n\n\010javagrp" +
-      "cb\006proto3"
+      "e\030\001 \001(\t\"f\n\016IngredientData\022\'\n\004data\030\001 \003(\0132" +
+      "\031.IngredientData.DataEntry\032+\n\tDataEntry\022" +
+      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\003:\0028\001\"\256\001\n\023Vend" +
+      "orIngredientMap\022J\n\023vendorIngredientMap\030\001" +
+      " \003(\0132-.VendorIngredientMap.VendorIngredi" +
+      "entMapEntry\032K\n\030VendorIngredientMapEntry\022" +
+      "\013\n\003key\030\001 \001(\t\022\036\n\005value\030\002 \001(\0132\017.Ingredient" +
+      "Data:\0028\001B\n\n\010javagrpcb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1334,17 +2070,29 @@ public final class Ingredients {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Ingredient_descriptor,
         new java.lang.String[] { "Name", });
-    internal_static_IngredientMap_descriptor =
+    internal_static_IngredientData_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_IngredientMap_fieldAccessorTable = new
+    internal_static_IngredientData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_IngredientMap_descriptor,
+        internal_static_IngredientData_descriptor,
         new java.lang.String[] { "Data", });
-    internal_static_IngredientMap_DataEntry_descriptor =
-      internal_static_IngredientMap_descriptor.getNestedTypes().get(0);
-    internal_static_IngredientMap_DataEntry_fieldAccessorTable = new
+    internal_static_IngredientData_DataEntry_descriptor =
+      internal_static_IngredientData_descriptor.getNestedTypes().get(0);
+    internal_static_IngredientData_DataEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_IngredientMap_DataEntry_descriptor,
+        internal_static_IngredientData_DataEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_VendorIngredientMap_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_VendorIngredientMap_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_VendorIngredientMap_descriptor,
+        new java.lang.String[] { "VendorIngredientMap", });
+    internal_static_VendorIngredientMap_VendorIngredientMapEntry_descriptor =
+      internal_static_VendorIngredientMap_descriptor.getNestedTypes().get(0);
+    internal_static_VendorIngredientMap_VendorIngredientMapEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_VendorIngredientMap_VendorIngredientMapEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
   }
 
