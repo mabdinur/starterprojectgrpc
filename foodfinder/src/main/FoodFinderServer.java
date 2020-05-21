@@ -25,11 +25,11 @@ public class FoodFinderServer
 
     public static void main(String[] args) throws IOException, InterruptedException
     {
-        ManagedChannel supplierChannel =
-            ManagedChannelBuilder.forAddress(ADDRESS, SUPPLIER_PORT).usePlaintext().build();
+        ManagedChannel supplierChannel = 
+            ManagedChannelBuilder.forAddress(ADDRESS, SUPPLIER_PORT).build();
         foodSupplierBlockingStub supplierStub = foodSupplierGrpc.newBlockingStub(supplierChannel);
 
-        ManagedChannel vendorChannel = ManagedChannelBuilder.forAddress(ADDRESS, VENDOR_PORT).usePlaintext().build();
+        ManagedChannel vendorChannel = ManagedChannelBuilder.forAddress(ADDRESS, VENDOR_PORT).build();
         foodVendorBlockingStub vendorStub = foodVendorGrpc.newBlockingStub(vendorChannel);
 
         BindableService foodFinderService = new FoodFinderService(supplierStub, vendorStub);

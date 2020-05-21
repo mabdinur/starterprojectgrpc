@@ -21,7 +21,6 @@ public class FoodSupplierServer
 
         System.out.println("FoodSupplierService started at " + server.getPort());
         System.out.println(java.util.Calendar.getInstance().getTime());
-
         server.awaitTermination();
     }
 

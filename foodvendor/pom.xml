@@ -97,10 +97,33 @@
 		<plugin>
 	        <artifactId>maven-compiler-plugin</artifactId>
 	        <version>3.8.0</version>
-	        <configuration>
-	          <release>11</release>
-	        </configuration>
 	    </plugin>
+	    <plugin>
+	        <groupId>org.apache.maven.plugins</groupId>
+	        <artifactId>maven-jar-plugin</artifactId>
+	        <version>3.2.0</version>
+	        <configuration>
+	          <archive>
+	            <manifest>
+	              <addClasspath>true</addClasspath>
+	              <mainClass>main.FoodVendorServer</mainClass>
+	            </manifest>
+	          </archive>
+	        </configuration>
+       </plugin>
+	    <plugin>
+	      <artifactId>maven-assembly-plugin</artifactId>
+	      <configuration>
+	        <archive>
+	          <manifest>
+	            <mainClass>main.FoodVendorServer</mainClass>
+	          </manifest>
+	        </archive>
+	        <descriptorRefs>
+	          <descriptorRef>jar-with-dependencies</descriptorRef>
+	        </descriptorRefs>
+	      </configuration>
+	   </plugin>
 	</plugins>
   </build>
 </project>

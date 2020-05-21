@@ -13,8 +13,10 @@ public class JSONReaderHelper
     public static JSONObject getData(String fileName)
     {
         JSONObject dataJson = new JSONObject();
-        try (FileReader reader = new FileReader(fileName)) {
+        try
+        {
             // Read JSON file
+        	FileReader reader = new FileReader(fileName);
             JSONParser jsonParser = new JSONParser();
             dataJson = (JSONObject) jsonParser.parse(reader);
         } catch (FileNotFoundException e) {

@@ -1,4 +1,5 @@
 foodvendor/bin/
 foodsupplier/bin/
 foodfinder/bin/
-
+foodvendor/api_config.yml
+foodvendor/kubernetes.yaml
